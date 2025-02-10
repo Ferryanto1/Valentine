@@ -1,0 +1,33 @@
+.image {
+    text-align: center;
+}
+
+.button{
+    text-align: center;
+    width: auto;
+}
+
+button{
+    font-size: 18px;
+    margin: 10px;
+}
+
+.results{
+    text-align: center;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.yes{
+    background-color: green;
+    color: white;
+}
+
+.no{
+    background-color: red;
+    color: white;
+}
+

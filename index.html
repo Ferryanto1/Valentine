@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Valentine</title>
+</head>
+<body>
+    <div class="image">
+        <img src="./image/milk-and-mocha-love.gif">
+        <h1>Will you be my valentine 黄婕恩? </h1>  
+    </div>
+    <div class="button">
+    <button class="yes" onclick="Yes()">Yes</button>
+    <button class="no" onclick="No()"> Mehh </button>
+</div>
+<script>
+    let messageIndex = 0;
+    const messages = [
+        "真的吗？",
+        "你真的不要骂？",
+        "想一想先",
+        "你真的要跟别人吗？",
+        "给你最后的机会!!!!"
+    ];
+    
+    function No(){
+        const yesButton = document.querySelector(".yes");
+        const noButton = document.querySelector(".no");
+        noButton.textContent = messages[messageIndex];
+        messageIndex +=1;
+        if (messageIndex > 4){
+            document.querySelector(".no").style.display="none";
+        }
+
+        const currentSize = parseFloat(
+            window.getComputedStyle(yesButton).fontSize
+        );
+        yesButton.style.fontSize = `${currentSize * 2}px`;
+    }
+
+    function Yes(){
+        window.location.href ="yespage.html";
+    }
+
+</script>
+</body>
+</html>
+
